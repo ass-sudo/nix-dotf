@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="network-vpn.svg"
+   inkscape:version="1.4 (unknown)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="14.545455"
+     inkscape:cx="7.63125"
+     inkscape:cy="22.584375"
+     inkscape:window-width="1920"
+     inkscape:window-height="998"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <style
+     type="text/css"
+     id="current-color-scheme">.ColorScheme-Text{color:#31363b;}.ColorScheme-Background{color:#eff0f1;}.ColorScheme-Highlight{color:#3498db;}.ColorScheme-ViewText{color:#31363b;}.ColorScheme-ViewBackground{color:#fcfcfc;}.ColorScheme-ViewHover{color:#93cee9;}.ColorScheme-ViewFocus{color:#3daee9;}.ColorScheme-ButtonText{color:#31363b;}.ColorScheme-ButtonBackground{color:#eff0f1;}.ColorScheme-ButtonHover{color:#93cee9;}.ColorScheme-ButtonFocus{color:#3daee9;}.ColorScheme-NegativeText { color: #e74c3c; } </style>
+  <g
+     id="network-vpn"
+     transform="translate(-22,-128)">
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none"
+       id="rect6813"
+       width="22.000004"
+       height="22.000004"
+       x="22.000002"
+       y="127.99998" />
+    <path
+       class="ColorScheme-Text"
+       style="fill:currentColor;fill-opacity:1;stroke:none"
+       d="m 33.000002,130.99999 c 0,0 -2,2.65752 -8,3.32422 0,0 0,9.33388 8,12.67578 8,-3.3419 8,-12.67578 8,-12.67578 -6,-0.6667 -8,-3.32422 -8,-3.32422 z m 0,1.37695 c 1.587,1.3447 3.87716,2.24176 6.8457,2.69336 -0.16126,1.4452 -0.31587,2.53279 -0.68945,3.58399 -0.78509,2.2091 -1.70047,3.55303 -2.52148,4.51953 -1.27223,1.4977 -2.42758,2.10383 -3.63477,2.70703 -1.20719,-0.6032 -2.36254,-1.20933 -3.63477,-2.70703 -0.821,-0.9665 -1.73639,-2.31043 -2.52148,-4.51953 -0.37358,-1.0512 -0.52819,-2.13879 -0.68945,-3.58399 2.96854,-0.5516 5.2587,-1.34866 6.8457,-2.69336 z m 0,1.19922 c -1.74349,1.2103 -3.70215,1.82324 -5.66797,2.24024 0.93085,5.282 2.93609,7.54067 5.66797,8.95507 2.73189,-1.4144 4.73712,-3.67307 5.66797,-8.95507 -1.96582,-0.417 -3.92448,-1.02994 -5.66797,-2.24024 z"
+       id="path4943-9-4-1-2" />
+  </g>
+  <path
+     d="m 13.970638,8.937931 c -0.254747,0.0078 -0.496906,0.112573 -0.676987,0.292928 -0.390371,0.39045 -0.390371,1.023416 0,1.413868 0.390456,0.390364 1.023418,0.390364 1.413863,0 0.390376,-0.390452 0.390376,-1.023418 0,-1.413868 C 14.512767,9.035827 14.246137,8.929842 13.970635,8.937931 Z"
+     id="use44033-3"
+     sodipodi:nodetypes="sccccss"
+     style="color:#31363b;fill:#f2f2f2;fill-opacity:1;stroke-width:0.666571"
+     class="ColorScheme-Text" />
+  <path
+     d="m 7.9694777,8.937931 c -0.2547476,0.0078 -0.4969064,0.112573 -0.6769872,0.292928 -0.3903716,0.39045 -0.3903716,1.023416 0,1.413868 0.3904558,0.390364 1.0234174,0.390364 1.4138627,0 0.3903757,-0.390452 0.3903757,-1.023418 0,-1.413868 C 8.5116061,9.035827 8.2449762,8.929842 7.969474,8.937931 Z"
+     id="use44033-3-6"
+     sodipodi:nodetypes="sccccss"
+     style="color:#31363b;fill:#f2f2f2;fill-opacity:1;stroke-width:0.666571"
+     class="ColorScheme-Text" />
+  <path
+     d="m 10.970058,8.937931 c -0.254747,0.0078 -0.496906,0.112573 -0.676987,0.292928 -0.3903716,0.39045 -0.3903716,1.023416 0,1.413868 0.390456,0.390364 1.023417,0.390364 1.413863,0 0.390375,-0.390452 0.390375,-1.023418 0,-1.413868 -0.194747,-0.195032 -0.461377,-0.301017 -0.73688,-0.292928 z"
+     id="use44033-3-2"
+     sodipodi:nodetypes="sccccss"
+     style="color:#31363b;fill:#f2f2f2;fill-opacity:1;stroke-width:0.666571"
+     class="ColorScheme-Text" />
+</svg>

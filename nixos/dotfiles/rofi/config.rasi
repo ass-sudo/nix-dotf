@@ -1,0 +1,99 @@
+configuration {
+    modi: "drun";
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    terminal: "kitty";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  ";
+    sidebar-mode: false;
+}
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color: inherit;
+}
+element-text {
+    vertical-align: 0.5;
+}
+window {
+    height: 400px;
+    width: 280px;
+    border: 0px;
+    background-color: @background;
+    border-radius: 0px;
+    padding: 8px;
+}
+mainbox {
+    background-color: @background;
+}
+inputbar {
+    children: [textbox-prompt-colon, entry];
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 0px;
+    padding: 4px;
+    margin: 0px 0px 8px 0px;
+}
+prompt {
+    enabled: false;
+}
+textbox-prompt-colon {
+    expand: false;
+    str: "󱄅";
+    background-color: transparent;
+    text-color: rgba(255, 255, 255, 0.6);
+    padding: 6px 8px;
+    font: "JetBrainsMono Nerd Font 14";
+}
+entry {
+    padding: 6px 8px;
+    text-color: @foreground;
+    background-color: transparent;
+    placeholder: "Type to filter";
+    placeholder-color: rgba(255, 255, 255, 0.3);
+}
+listview {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    columns: 1;
+    lines: 8;
+    background-color: @background;
+    scrollbar: false;
+    spacing: 4px;
+}
+element {
+    padding: 8px;
+    background-color: transparent;
+    text-color: @foreground;
+    border-radius: 0px;
+}
+element-icon {
+    size: 24px;
+    margin: 0 8px 0 0;
+}
+element-text {
+    vertical-align: 0.5;
+}
+element selected {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+    border-radius: 0px;
+}
+mode-switcher {
+    enabled: false;
+}
+button {
+    padding: 10px;
+    background-color: @background;
+    text-color: @foreground;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+button selected {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}

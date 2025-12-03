@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg7384"
+   height="22"
+   width="22"
+   version="1.1"
+   sodipodi:docname="network-cellular-connected-symbolic.svg"
+   inkscape:version="1.4 (unknown)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="24.15625"
+     inkscape:cx="19.042691"
+     inkscape:cy="9.8318241"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7384" />
+  <metadata
+     id="metadata90">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title
+     id="title9167">Gnome Symbolic Icon Theme</title>
+  <g
+     id="layer9"
+     transform="translate(-158.0006,-254.5)">
+    <path
+       id="rect5222-6"
+       style="color:#000000;fill:#cecfce"
+       d="m 167,259 c -1.0092,0.005 -1,1 -1,1 v 11 c 0,1 1,1 1,1 h 4 c 1,0 1,-1 1,-1 v -8 c 9e-4,-0.554 -0.446,-1 -1,-1 h -3 v -2 c 0,0 -0.009,-0.99447 -1,-1 z m 0,4 h 4 v 3.0312 L 167,266 Z m 0,4 h 1 v 1 h 1 v -1 h 1 v 1 h 1 v 1 h -1 v 1 h 1 v 1 h -1 v -1 h -1 v 1 h -1 v -1 h -1 v -1 h 1 v -1 h -1 z m 1,2 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z" />
+    <path
+       id="rect3217-6-2-2-4-8-8"
+       style="color:#cecfce;text-indent:0;text-transform:none;fill:#cecfce"
+       d="m 177,263 v 1 c 0,0.25689 -0.12983,0.52846 -0.3125,0.71875 l -1.28,1.28 1.2812,1.2812 c 0.18267,0.19029 0.3125,0.46186 0.3125,0.71875 v 1 h -1 c -0.30945,0 -0.55232,-0.0903 -0.75,-0.28125 l -2.66,-2.72 2.66,-2.72 c 0.2,-0.19 0.44,-0.28 0.75,-0.28 h 1 z" />
+    <path
+       id="path5302"
+       style="color:#cecfce;text-indent:0;text-transform:none;fill:#cecfce"
+       d="m 161,263 v 1 c 0,0.25689 0.12983,0.52846 0.3125,0.71875 l 1.2812,1.2812 -1.2812,1.2812 C 161.12983,267.47144 161,267.74301 161,267.9999 v 1 h 1 c 0.30945,0 0.55232,-0.0903 0.75,-0.28125 l 2.66,-2.72 -2.66,-2.72 c -0.2,-0.19 -0.44,-0.28 -0.75,-0.28 h -1 z" />
+  </g>
+</svg>
