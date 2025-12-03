@@ -8,8 +8,8 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 [![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-00ADD8.svg?style=for-the-badge&logo=wayland&logoColor=white)](https://hyprland.org)
 [![License](https://img.shields.io/badge/License-GNU%20GPL-orange.svg?style=for-the-badge)](LICENSE)
 
-[![Stars](https://img.shields.io/github/stars/ass-sudo/nix-dotfiles?style=social)](https://github.com/ass-sudo/nix-dotf/stargazers)
-[![Forks](https://img.shields.io/github/forks/ass-sudo/nix-dotfiles?style=social)](https://github.com/ass-sudo/nix-dotf/network/members)
+[![Stars](https://img.shields.io/github/stars/ass-sudo/nix-dotf?style=social)](https://github.com/ass-sudo/nix-dotf/stargazers)
+[![Forks](https://img.shields.io/github/forks/ass-sudo/nix-dotf?style=social)](https://github.com/ass-sudo/nix-dotf/network/members)
 
 [Screenshots](#-screenshots) • [Features](#-features) •
 [Installation](#-installation) • [Aliases](#-shell-aliases)
