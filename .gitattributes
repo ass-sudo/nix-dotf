@@ -1,5 +1,5 @@
 *.nix linguist-detectable=true
-*.css linguist-detectable=true
+*.css linguist-detectable=false
 *.js linguist-detectable=true
 *.html linguist-detectable=true
 *.json linguist-detectable=true
