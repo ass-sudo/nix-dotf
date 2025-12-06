@@ -6,6 +6,7 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 
 [![NixOS](https://img.shields.io/badge/NixOS-Unstable-blue.svg?style=for-the-badge&logo=nixos&logoColor=white)](https://nixos.org)
 [![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-00ADD8.svg?style=for-the-badge&logo=wayland&logoColor=white)](https://hyprland.org)
+[![Size](https://img.shields.io/github/languages/code-size/ass-sudo/nix-dotf?style=for-the-badge)](https://github.com/ass-sudo/nix-dotf)
 [![License](https://img.shields.io/badge/License-GNU%20GPL-orange.svg?style=for-the-badge)](LICENSE)
 
 [![Stars](https://img.shields.io/github/stars/ass-sudo/nix-dotf?style=social)](https://github.com/ass-sudo/nix-dotf/stargazers)
