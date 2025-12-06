@@ -5,13 +5,8 @@
 }: {
   programs.git = {
     enable = true;
-    userName = "user";
-    userEmail = "email";
+    userName = "user"; 
+    userEmail = "mail";
 
-    extraConfig = {
-      init.defaultBranch = "main";
-      core.editor = "nvim";
-      pull.rebase = false;
-    };
   };
 }

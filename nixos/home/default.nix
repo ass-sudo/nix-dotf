@@ -2,9 +2,12 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }: {
   imports = [
+    inputs.nvf.homeManagerModules.default
+    ./programs/nvf.nix
     ./programs/fish.nix
     ./packages.nix
     ./dotfiles.nix

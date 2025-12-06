@@ -9,20 +9,29 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser-flake = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {
+  outputs = inputs @ {
     nixpkgs,
     home-manager,
     zen-browser-flake,
+    nvf,
     ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+
+      specialArgs = {inherit inputs;};
+
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager
@@ -33,7 +42,7 @@
             backupFileExtension = "backup";
             users.nixos = import ./home;
             extraSpecialArgs = {
-              inherit zen-browser-flake;
+              inherit zen-browser-flake inputs;
             };
           };
         }

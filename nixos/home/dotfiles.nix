@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.file = {
     ".config/waybar".source = ../dotfiles/waybar;
     ".config/kitty/kitty.conf".source = ../dotfiles/kitty/kitty.conf;

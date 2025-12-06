@@ -68,7 +68,7 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 
 #### 🛠️ Development Tools
 
-- **Vim/NVim** - Powerful text editors
+- **Vim** - Powerful text editors
 - **NVF** - Neovim IDE with LSP support
 - **Git** - Distributed version control
 - **LSD** - Modern replacement for ls command
@@ -118,7 +118,7 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 |   `ll`    |                      `lsd -lah`                      |   `la`    |           `lsd -a`            |
 |   `ls`    |                        `lsd`                         |   `..`    |            `cd ..`            |
 |   `...`   |                      `cd ../..`                      |  `grep`   |      `grep --color=auto`      |
-|   `nvf`   |            `nix run github:notashelf/nvf`            |  `snvf`   |          `sudo nvf`           |
+|   `nvf`   |                        `nvim`                        |  `snvf`   |          `sudo nvim`          |
 |   `gs`    |                     `git status`                     |   `ga`    |           `git add`           |
 |   `gc`    |                     `git commit`                     |   `gp`    |          `git push`           |
 |   `gcl`   |                     `git clone`                      |  `gpam`   |    `git push origin main`     |
@@ -164,7 +164,7 @@ reboot
 - Configure your monitor in Hyprland:
 
 ```bash
-nvf /etc/nixos/dotfiles/hypr/hyprland.conf
+snvf /etc/nixos/dotfiles/hypr/hyprland.conf
 ```
 
 ```conf

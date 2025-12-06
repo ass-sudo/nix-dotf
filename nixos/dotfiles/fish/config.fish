@@ -3,8 +3,8 @@ alias la='lsd -a'
 alias ls='lsd'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias nvf='nix run github:notashelf/nvf'
-alias snvf='sudo nix run github:notashelf/nvf'
+alias nvf='nvim'
+alias snvf='sudo nvim'
 alias grep='grep --color=auto'
 alias gs='git status'
 alias ga='git add'
@@ -13,6 +13,7 @@ alias gp='git push'
 alias gpam='git push origin main'
 alias gpl='git clone'
 alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#nixos'
+alias update='sudo nix flake update'
 
 if status is-interactive
     fastfetch

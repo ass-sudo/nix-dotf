@@ -6,7 +6,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-
     ./modules/nvidia.nix
     ./modules/hyprland.nix
     ./modules/audio.nix
