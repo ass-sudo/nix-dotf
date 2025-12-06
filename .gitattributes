@@ -1,5 +1,6 @@
 *.nix linguist-detectable=true
-*.css linguist-detectable=false
-*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.json linguist-detectable=false
+*.css linguist-detectable=true
+*.js linguist-detectable=true
+*.html linguist-detectable=true
+*.json linguist-detectable=true
+*.vim linguist-detectable=true
