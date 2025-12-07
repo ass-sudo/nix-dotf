@@ -25,7 +25,7 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 
 |      Terminal/IDE      |          Rofi          |
 | :--------------------: | :--------------------: |
-| ![1](screenshot/1.png) | ![2](screenshot/2.png) |
+| ![1](screenshot/3.png) | ![2](screenshot/2.png) |
 
 </div>
 
