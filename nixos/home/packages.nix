@@ -61,5 +61,6 @@
     dconf
     gsettings-desktop-schemas
     zen-browser-flake.packages.${pkgs.system}.zen-browser
+    discord
   ];
 }
