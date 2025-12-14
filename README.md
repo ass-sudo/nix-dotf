@@ -23,7 +23,10 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 
 <div align="center">
 
- (screenshot/1.png) 
+
+|   | 
+|:---------------:|
+| ![1](screenshot/1.png) | 
 
 </div>
 
