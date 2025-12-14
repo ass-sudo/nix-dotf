@@ -1,26 +1,9 @@
 /*========================================================================================================*
 
   +-----+-----+-----+-----+-----+-----+-----+
-  | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
-  | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
-  +-----+-----+-----+-----+-----+-----+-----+ Mouse Edition.
-
-
-    Description:    Cascade, Mouse Edition, is a Firefox Style based on the Cascade theme by Andreas Grafen
-                    What you get is a really simple one-line layout using the new Proton UI.
-
-                  The original Cascade Theme by Andreas Grafen was based on SimpleFox :
-                  > SimpleFox: https://github.com/migueravila/SimpleFox
-
-
-    Authors:        Andreas Grafen (original cascade theme)
-                    (https://andreas.grafen.info)
-
-                    Clément Rambaud (minor tweaks on the original file)
-
-
-    Repository:     https://github.com/andreasgrafen/cascade
-                      https://github.com/crambaud/cascade
+  | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
+  | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
+  +-----+-----+-----+-----+-----+-----+-----+ Mouse Edition - Vim Colors
 
 *========================================================================================================*/
 
@@ -29,44 +12,29 @@
  | C | O | N | F | I | G |
  +---+---+---+---+---+---*/
 
-/* Feel free to tweak the following
- * config settingsto your own liking. */
-
-
- :root {
+:root {
     
     /*---+---+---+---+---+---+---+
      | C | O | L | O | U | R | S |
      +---+---+---+---+---+---+---*/
 
-    /* Comment the color theme you don't want to use */
+    /* Vim Theme Colors - точно из твоего nvim конфига */
+    --window-colour:               #0c0a0c;        /* vim Normal bg */
+    --secondary-colour:            #1b171b;        /* vim CursorLine */
+    --inverted-colour:             #e0e0e0;        /* vim foreground */
 
-    /* Dark Theme Colors (Catppuccin Mocha) */
-    --window-colour:               #0c0e0c; /* Base */
-    --secondary-colour:            #151215 /* Mantle */
-    --inverted-colour:             #cdd6f4; /* Text */
-
-    /* Light Theme Colors
-    --window-colour:               #FAFAFC;
-    --secondary-colour:            #EAEAEC;
-    --inverted-colour:             #1E2021;
-    */
-
+    /* Vim Syntax Colors для Container Tabs */
+    --uc-identity-color-blue:      #61afef;        /* vim blue */
+    --uc-identity-color-turquoise: #56b6c2;        /* vim cyan */
+    --uc-identity-color-green:     #98c379;        /* vim green */
+    --uc-identity-color-yellow:    #e5c07b;        /* vim yellow */
+    --uc-identity-color-orange:    #d19a66;        /* vim orange */
+    --uc-identity-color-red:       #e06c75;        /* vim red */
+    --uc-identity-color-pink:      #c678dd;        /* vim purple */
+    --uc-identity-color-purple:    #c678dd;        /* vim purple */
      
-    /* Containter Tab Colours (Catppuccin Palette) */
-    --uc-identity-color-blue:      #89b4fa;
-    --uc-identity-color-turquoise: #94e2d5;
-    --uc-identity-color-green:     #a6e3a1;
-    --uc-identity-color-yellow:    #f9e2af;
-    --uc-identity-color-orange:    #fab387;
-    --uc-identity-color-red:       #f38ba8;
-    --uc-identity-color-pink:      #f5c2e7;
-    --uc-identity-color-purple:    #cba6f7;
-     
-    
-    /* URL colour in URL bar suggestions */
-    --urlbar-popup-url-color: var(--uc-identity-color-purple) !important;
-     
+    /* URL colour в suggestions - используем vim blue */
+    --urlbar-popup-url-color: var(--uc-identity-color-blue) !important;
      
      
     /*---+---+---+---+---+---+---+
@@ -138,9 +106,6 @@
  | L | A | Y | O | U | T |
  +---+---+---+---+---+---*/
 
-/* No need to change anything below this comment.
- * Just tweak it if you want to tweak the overall layout. c: */
-
 :root {
     
     --uc-theme-colour:                          var(--window-colour);
@@ -208,7 +173,7 @@ window,
 
 
 
-/* grey out ccons inside the toolbar to make it
+/* grey out icons inside the toolbar to make it
  * more aligned with the Black & White colour look */
 #PersonalToolbar toolbarbutton:not(:hover),
 #bookmarks-toolbar-button:not(:hover) { filter: grayscale(1) !important; }
@@ -423,12 +388,12 @@ window,
 
 
 
-/* Container Tabs */
-.identity-color-blue      { --identity-tab-color: var(--uc-identity-color-blue)       !important; --identity-icon-color: var(--uc-identity-color-blue)       !important; }
+/* Container Tabs - используем vim syntax colors */
+.identity-color-blue      { --identity-tab-color: var(--uc-identity-color-blue)      !important; --identity-icon-color: var(--uc-identity-color-blue)      !important; }
 .identity-color-turquoise { --identity-tab-color: var(--uc-identity-color-turquoise) !important; --identity-icon-color: var(--uc-identity-color-turquoise) !important; }
-.identity-color-green     { --identity-tab-color: var(--uc-identity-color-green)      !important; --identity-icon-color: var(--uc-identity-color-green)      !important; }
-.identity-color-yellow    { --identity-tab-color: var(--uc-identity-color-yellow)     !important; --identity-icon-color: var(--uc-identity-color-yellow)     !important; }
-.identity-color-orange    { --identity-tab-color: var(--uc-identity-color-orange)     !important; --identity-icon-color: var(--uc-identity-color-orange)     !important; }
-.identity-color-red       { --identity-tab-color: var(--uc-identity-color-red)        !important; --identity-icon-color: var(--uc-identity-color-red)        !important; }
-.identity-color-pink      { --identity-tab-color: var(--uc-identity-color-pink)       !important; --identity-icon-color: var(--uc-identity-color-pink)       !important; }
-.identity-color-purple    { --identity-tab-color: var(--uc-identity-color-purple)     !important; --identity-icon-color: var(--uc-identity-color-purple)     !important; }
+.identity-color-green     { --identity-tab-color: var(--uc-identity-color-green)     !important; --identity-icon-color: var(--uc-identity-color-green)     !important; }
+.identity-color-yellow    { --identity-tab-color: var(--uc-identity-color-yellow)    !important; --identity-icon-color: var(--uc-identity-color-yellow)    !important; }
+.identity-color-orange    { --identity-tab-color: var(--uc-identity-color-orange)    !important; --identity-icon-color: var(--uc-identity-color-orange)    !important; }
+.identity-color-red       { --identity-tab-color: var(--uc-identity-color-red)       !important; --identity-icon-color: var(--uc-identity-color-red)       !important; }
+.identity-color-pink      { --identity-tab-color: var(--uc-identity-color-pink)      !important; --identity-icon-color: var(--uc-identity-color-pink)      !important; }
+.identity-color-purple    { --identity-tab-color: var(--uc-identity-color-purple)    !important; --identity-icon-color: var(--uc-identity-color-purple)    !important; }

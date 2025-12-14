@@ -59,7 +59,6 @@
     zoxide
     dconf
     gsettings-desktop-schemas
-    discord
     yazi
   ];
 }

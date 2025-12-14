@@ -179,6 +179,22 @@ monitor = DP-1, 1920x1080@165, 0x0, 1
 - ✅ Use username **`nixos`** for best compatibility
 - ⚠️ **Do not change** the layout switch from `ALT + SHIFT` (breaks keybindings)
 - 🖥️ For multiple monitors, add additional `monitor` lines
+- :octocat: Activate the theme for FireFox
+
+```bash
+cp -r /etc/nixos/dotfiles/chrome/ ~/.mozilla/firefox/*.default/
+firefox 
+```
+
+```bash
+about:config 
+toolkit.legacyUserProfileCustomizations.stylesheets - true
+```
+
+```bash
+pkill firefox 
+firefox
+```
 
 ---
 
