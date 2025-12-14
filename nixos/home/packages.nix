@@ -2,7 +2,6 @@
   config,
   pkgs,
   lib,
-  zen-browser-flake,
   nvf,
   ...
 }: {
@@ -33,6 +32,7 @@
     python3Packages.black
 
     #program
+    firefox
     waybar
     rofi
     swww
@@ -44,7 +44,6 @@
     fish
     neovim
     telegram-desktop
-    nemo
     gimp
     steam
     mpv
@@ -60,7 +59,7 @@
     zoxide
     dconf
     gsettings-desktop-schemas
-    zen-browser-flake.packages.${pkgs.system}.zen-browser
     discord
+    yazi
   ];
 }

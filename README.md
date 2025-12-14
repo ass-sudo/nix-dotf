@@ -23,9 +23,7 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 
 <div align="center">
 
-|      Terminal/IDE      |          Rofi          |
-| :--------------------: | :--------------------: |
-| ![1](screenshot/3.png) | ![2](screenshot/2.png) |
+ (screenshot/1.png) 
 
 </div>
 
@@ -79,8 +77,8 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 
 #### 🎨 Applications
 
-- **Zen Browser** - Privacy-focused web browser
-- **Nemo** - Feature-rich file manager
+- **Firefox** - Browser
+- **Yazi** - File manager
 - **GIMP** - Professional image editor
 - **MPV** - Minimalist media player
 - **Telegram** - Secure messenger

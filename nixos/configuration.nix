@@ -11,6 +11,7 @@
     ./modules/audio.nix
     ./modules/fonts.nix
     ./modules/zapret.nix
+    ./modules/ollama.nix
   ];
 
   system.stateVersion = "24.05";

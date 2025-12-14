@@ -8,9 +8,10 @@
   programs.nvf = {
     enable = true;
     
-    # Добавляем wl-clipboard в PATH для nvim
     settings.vim.extraPackages = with pkgs; [
       wl-clipboard
+      ripgrep
+      fd
     ];
     
     settings.vim = {
@@ -25,23 +26,19 @@
       
       # Clipboard
       luaConfigRC.clipboard = ''
-        -- Системный буфер обмена
         vim.opt.clipboard = "unnamedplus"
       '';
       
-      # Кастомные цвета
+      # [Твой customColors код остается как есть]
       luaConfigRC.customColors = ''
-        -- Применяем кастомную цветовую схему
         vim.api.nvim_create_autocmd("ColorScheme", {
           pattern = "*",
           callback = function()
-            -- Background and foreground
             vim.api.nvim_set_hl(0, "Normal", { bg = "#131110", fg = "#e0e0e0" })
             vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1a1818", fg = "#e0e0e0" })
             vim.api.nvim_set_hl(0, "Cursor", { bg = "#61afef", fg = "#131110" })
             vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1f1d1d" })
             
-            -- Colors 0-15
             vim.g.terminal_color_0 = "#131110"
             vim.g.terminal_color_1 = "#e06c75"
             vim.g.terminal_color_2 = "#98c379"
@@ -59,7 +56,6 @@
             vim.g.terminal_color_14 = "#56b6c2"
             vim.g.terminal_color_15 = "#e0e0e0"
             
-            -- UI элементы
             vim.api.nvim_set_hl(0, "LineNr", { fg = "#4b5263", bg = "#131110" })
             vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#e5c07b", bg = "#131110", bold = true })
             vim.api.nvim_set_hl(0, "SignColumn", { bg = "#131110" })
@@ -71,7 +67,6 @@
             vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "#1f1d1d" })
             vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#4b5263" })
             
-            -- Syntax highlighting (красивые цвета)
             vim.api.nvim_set_hl(0, "Comment", { fg = "#5c6370", italic = true })
             vim.api.nvim_set_hl(0, "Constant", { fg = "#d19a66" })
             vim.api.nvim_set_hl(0, "String", { fg = "#98c379" })
@@ -109,17 +104,14 @@
             vim.api.nvim_set_hl(0, "SpecialComment", { fg = "#5c6370" })
             vim.api.nvim_set_hl(0, "Debug", { fg = "#e06c75" })
             
-            -- Git
             vim.api.nvim_set_hl(0, "DiffAdd", { fg = "#98c379", bg = "#1f1d1d" })
             vim.api.nvim_set_hl(0, "DiffChange", { fg = "#e5c07b", bg = "#1f1d1d" })
             vim.api.nvim_set_hl(0, "DiffDelete", { fg = "#e06c75", bg = "#1f1d1d" })
             vim.api.nvim_set_hl(0, "DiffText", { fg = "#61afef", bg = "#2c2a2a" })
             
-            -- Search
             vim.api.nvim_set_hl(0, "Search", { bg = "#e5c07b", fg = "#131110" })
             vim.api.nvim_set_hl(0, "IncSearch", { bg = "#61afef", fg = "#131110" })
             
-            -- Errors and warnings
             vim.api.nvim_set_hl(0, "Error", { fg = "#e06c75" })
             vim.api.nvim_set_hl(0, "ErrorMsg", { fg = "#e06c75" })
             vim.api.nvim_set_hl(0, "WarningMsg", { fg = "#e5c07b" })
@@ -127,10 +119,36 @@
           end,
         })
         
-        -- Применяем сразу после загрузки
         vim.schedule(function()
           vim.cmd("doautocmd ColorScheme")
         end)
+      '';
+      
+      # Дополнительные плагины
+      luaConfigRC.extraPlugins = ''
+        -- Indent blankline
+        require("ibl").setup({
+          indent = {
+            char = "│",
+          },
+          scope = {
+            enabled = true,
+            show_start = true,
+            show_end = false,
+          },
+        })
+        
+        -- Colorizer
+        require("colorizer").setup()
+        
+        -- Todo comments
+        require("todo-comments").setup()
+        
+        -- Trouble
+        require("trouble").setup()
+        
+        -- Hop
+        require("hop").setup()
       '';
       
       lineNumberMode = "relNumber";
@@ -147,163 +165,95 @@
             themable = true;
           };
           highlights = {
-            fill = {
-              bg = "#131110";
-            };
-            background = {
-              bg = "#131110";
-            };
-            tab = {
-              bg = "#131110";
-            };
-            tab_selected = {
-              bg = "#1f1d1d";
-            };
-            tab_separator = {
-              bg = "#131110";
-            };
-            tab_separator_selected = {
-              bg = "#1f1d1d";
-            };
-            tab_close = {
-              bg = "#131110";
-            };
-            close_button = {
-              bg = "#131110";
-            };
-            close_button_visible = {
-              bg = "#131110";
-            };
-            close_button_selected = {
-              bg = "#1f1d1d";
-            };
-            buffer_visible = {
-              bg = "#131110";
-            };
+            fill = { bg = "#131110"; };
+            background = { bg = "#131110"; };
+            tab = { bg = "#131110"; };
+            tab_selected = { bg = "#1f1d1d"; };
+            tab_separator = { bg = "#131110"; };
+            tab_separator_selected = { bg = "#1f1d1d"; };
+            tab_close = { bg = "#131110"; };
+            close_button = { bg = "#131110"; };
+            close_button_visible = { bg = "#131110"; };
+            close_button_selected = { bg = "#1f1d1d"; };
+            buffer_visible = { bg = "#131110"; };
             buffer_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            numbers = {
-              bg = "#131110";
-            };
-            numbers_visible = {
-              bg = "#131110";
-            };
+            numbers = { bg = "#131110"; };
+            numbers_visible = { bg = "#131110"; };
             numbers_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            diagnostic = {
-              bg = "#131110";
-            };
-            diagnostic_visible = {
-              bg = "#131110";
-            };
+            diagnostic = { bg = "#131110"; };
+            diagnostic_visible = { bg = "#131110"; };
             diagnostic_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            hint = {
-              bg = "#131110";
-            };
-            hint_visible = {
-              bg = "#131110";
-            };
+            hint = { bg = "#131110"; };
+            hint_visible = { bg = "#131110"; };
             hint_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            hint_diagnostic = {
-              bg = "#131110";
-            };
-            hint_diagnostic_visible = {
-              bg = "#131110";
-            };
+            hint_diagnostic = { bg = "#131110"; };
+            hint_diagnostic_visible = { bg = "#131110"; };
             hint_diagnostic_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            info = {
-              bg = "#131110";
-            };
-            info_visible = {
-              bg = "#131110";
-            };
+            info = { bg = "#131110"; };
+            info_visible = { bg = "#131110"; };
             info_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            info_diagnostic = {
-              bg = "#131110";
-            };
-            info_diagnostic_visible = {
-              bg = "#131110";
-            };
+            info_diagnostic = { bg = "#131110"; };
+            info_diagnostic_visible = { bg = "#131110"; };
             info_diagnostic_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            warning = {
-              bg = "#131110";
-            };
-            warning_visible = {
-              bg = "#131110";
-            };
+            warning = { bg = "#131110"; };
+            warning_visible = { bg = "#131110"; };
             warning_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            warning_diagnostic = {
-              bg = "#131110";
-            };
-            warning_diagnostic_visible = {
-              bg = "#131110";
-            };
+            warning_diagnostic = { bg = "#131110"; };
+            warning_diagnostic_visible = { bg = "#131110"; };
             warning_diagnostic_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            error = {
-              bg = "#131110";
-            };
-            error_visible = {
-              bg = "#131110";
-            };
+            error = { bg = "#131110"; };
+            error_visible = { bg = "#131110"; };
             error_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            error_diagnostic = {
-              bg = "#131110";
-            };
-            error_diagnostic_visible = {
-              bg = "#131110";
-            };
+            error_diagnostic = { bg = "#131110"; };
+            error_diagnostic_visible = { bg = "#131110"; };
             error_diagnostic_selected = {
               bg = "#1f1d1d";
               bold = true;
               italic = false;
             };
-            modified = {
-              bg = "#131110";
-            };
-            modified_visible = {
-              bg = "#131110";
-            };
-            modified_selected = {
-              bg = "#1f1d1d";
-            };
+            modified = { bg = "#131110"; };
+            modified_visible = { bg = "#131110"; };
+            modified_selected = { bg = "#1f1d1d"; };
             duplicate_selected = {
               bg = "#1f1d1d";
               italic = false;
@@ -316,21 +266,11 @@
               bg = "#131110";
               italic = false;
             };
-            separator_selected = {
-              bg = "#1f1d1d";
-            };
-            separator_visible = {
-              bg = "#131110";
-            };
-            separator = {
-              bg = "#131110";
-            };
-            indicator_selected = {
-              bg = "#1f1d1d";
-            };
-            indicator_visible = {
-              bg = "#131110";
-            };
+            separator_selected = { bg = "#1f1d1d"; };
+            separator_visible = { bg = "#131110"; };
+            separator = { bg = "#131110"; };
+            indicator_selected = { bg = "#1f1d1d"; };
+            indicator_visible = { bg = "#131110"; };
             pick_selected = {
               bg = "#1f1d1d";
               bold = true;
@@ -346,12 +286,8 @@
               bold = true;
               italic = false;
             };
-            offset_separator = {
-              bg = "#131110";
-            };
-            trunc_marker = {
-              bg = "#131110";
-            };
+            offset_separator = { bg = "#131110"; };
+            trunc_marker = { bg = "#131110"; };
           };
         };
       };
@@ -380,6 +316,7 @@
         lightbulb.enable = true;
       };
       
+      # ИСПРАВЛЕНО: используем lib.mkForce
       autocomplete.nvim-cmp = {
         enable = true;
         setupOpts.sources = lib.mkForce [
@@ -401,6 +338,15 @@
       autopairs.nvim-autopairs.enable = true;
       comments.comment-nvim.enable = true;
       binds.whichKey.enable = true;
+      
+      # Дополнительные плагины (правильная структура)
+      startPlugins = with pkgs.vimPlugins; [
+        indent-blankline-nvim
+        nvim-colorizer-lua
+        todo-comments-nvim
+        trouble-nvim
+        hop-nvim
+      ];
       
       maps = {
         normal = {
@@ -424,6 +370,69 @@
             action = ":Telescope buffers<CR>";
             silent = true;
             desc = "Find buffers";
+          };
+          "<leader>ft" = {
+            action = ":TodoTelescope<CR>";
+            silent = true;
+            desc = "Find todos";
+          };
+          
+          # LSP
+          "gd" = {
+            action = ":lua vim.lsp.buf.definition()<CR>";
+            silent = true;
+            desc = "Go to definition";
+          };
+          "gr" = {
+            action = ":lua vim.lsp.buf.references()<CR>";
+            silent = true;
+            desc = "References";
+          };
+          "K" = {
+            action = ":lua vim.lsp.buf.hover()<CR>";
+            silent = true;
+            desc = "Hover documentation";
+          };
+          "<leader>rn" = {
+            action = ":lua vim.lsp.buf.rename()<CR>";
+            silent = true;
+            desc = "Rename";
+          };
+          "<leader>ca" = {
+            action = ":lua vim.lsp.buf.code_action()<CR>";
+            silent = true;
+            desc = "Code action";
+          };
+          
+          # Diagnostics
+          "[d" = {
+            action = ":lua vim.diagnostic.goto_prev()<CR>";
+            silent = true;
+            desc = "Previous diagnostic";
+          };
+          "]d" = {
+            action = ":lua vim.diagnostic.goto_next()<CR>";
+            silent = true;
+            desc = "Next diagnostic";
+          };
+          
+          # Trouble
+          "<leader>xx" = {
+            action = ":TroubleToggle<CR>";
+            silent = true;
+            desc = "Toggle trouble";
+          };
+          
+          # Hop
+          "<leader>hw" = {
+            action = ":HopWord<CR>";
+            silent = true;
+            desc = "Hop to word";
+          };
+          "<leader>hl" = {
+            action = ":HopLine<CR>";
+            silent = true;
+            desc = "Hop to line";
           };
           
           "<leader>w" = {
@@ -486,6 +495,14 @@
             action = ''"+y'';
             silent = true;
             desc = "Copy to clipboard";
+          };
+        };
+        
+        insert = {
+          "jk" = {
+            action = "<ESC>";
+            silent = true;
+            desc = "Exit insert mode";
           };
         };
       };

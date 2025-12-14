@@ -13,5 +13,6 @@
     "Wallpaper".source = ../dotfiles/Wallpaper;
     ".local/share/icons".source = ../dotfiles/icons;
     ".local/share/themes".source = ../dotfiles/gtk-themes;
+    ".mozilla/firefox/*default*/chrome".source = ../dotfiles/chrome;
   };
 }
