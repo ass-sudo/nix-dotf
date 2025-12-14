@@ -24,9 +24,10 @@ _Fast and minimalistic NixOS configuration with Hyprland_
 <div align="center">
 
 
-|   | 
-|:---------------:|
-| ![1](screenshot/1.png) | 
+| Terminal & Workspace | Rofi & NVF |
+|:---------------:|:---------------:|
+| ![1](screenshot/4.png) | ![2](screenshot/3.png) |
+| ![3](screenshot/1.png) | ![4](screenshot/2.png) |
 
 </div>
 

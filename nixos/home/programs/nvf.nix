@@ -29,17 +29,17 @@
         vim.opt.clipboard = "unnamedplus"
       '';
       
-      # [Твой customColors код остается как есть]
+      # Custom Colors
       luaConfigRC.customColors = ''
         vim.api.nvim_create_autocmd("ColorScheme", {
           pattern = "*",
           callback = function()
-            vim.api.nvim_set_hl(0, "Normal", { bg = "#131110", fg = "#e0e0e0" })
-            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1a1818", fg = "#e0e0e0" })
-            vim.api.nvim_set_hl(0, "Cursor", { bg = "#61afef", fg = "#131110" })
-            vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1f1d1d" })
+            vim.api.nvim_set_hl(0, "Normal", { bg = "#0c0a0c", fg = "#e0e0e0" })
+            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#151215", fg = "#e0e0e0" })
+            vim.api.nvim_set_hl(0, "Cursor", { bg = "#61afef", fg = "#0c0a0c" })
+            vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1b171b" })
             
-            vim.g.terminal_color_0 = "#131110"
+            vim.g.terminal_color_0 = "#0c0a0c"
             vim.g.terminal_color_1 = "#e06c75"
             vim.g.terminal_color_2 = "#98c379"
             vim.g.terminal_color_3 = "#e5c07b"
@@ -56,15 +56,15 @@
             vim.g.terminal_color_14 = "#56b6c2"
             vim.g.terminal_color_15 = "#e0e0e0"
             
-            vim.api.nvim_set_hl(0, "LineNr", { fg = "#4b5263", bg = "#131110" })
-            vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#e5c07b", bg = "#131110", bold = true })
-            vim.api.nvim_set_hl(0, "SignColumn", { bg = "#131110" })
-            vim.api.nvim_set_hl(0, "VertSplit", { fg = "#2c2a2a", bg = "#131110" })
+            vim.api.nvim_set_hl(0, "LineNr", { fg = "#4b5263", bg = "#0c0a0c" })
+            vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#e5c07b", bg = "#0c0a0c", bold = true })
+            vim.api.nvim_set_hl(0, "SignColumn", { bg = "#0c0a0c" })
+            vim.api.nvim_set_hl(0, "VertSplit", { fg = "#2c2a2a", bg = "#0c0a0c" })
             vim.api.nvim_set_hl(0, "StatusLine", { bg = "#2c2a2a", fg = "#e0e0e0" })
-            vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#1f1d1d", fg = "#5c6370" })
-            vim.api.nvim_set_hl(0, "Pmenu", { bg = "#1f1d1d", fg = "#e0e0e0" })
+            vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#1b171b", fg = "#5c6370" })
+            vim.api.nvim_set_hl(0, "Pmenu", { bg = "#1b171b", fg = "#e0e0e0" })
             vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#2c2a2a", fg = "#61afef", bold = true })
-            vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "#1f1d1d" })
+            vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "#1b171b" })
             vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#4b5263" })
             
             vim.api.nvim_set_hl(0, "Comment", { fg = "#5c6370", italic = true })
@@ -104,13 +104,13 @@
             vim.api.nvim_set_hl(0, "SpecialComment", { fg = "#5c6370" })
             vim.api.nvim_set_hl(0, "Debug", { fg = "#e06c75" })
             
-            vim.api.nvim_set_hl(0, "DiffAdd", { fg = "#98c379", bg = "#1f1d1d" })
-            vim.api.nvim_set_hl(0, "DiffChange", { fg = "#e5c07b", bg = "#1f1d1d" })
-            vim.api.nvim_set_hl(0, "DiffDelete", { fg = "#e06c75", bg = "#1f1d1d" })
+            vim.api.nvim_set_hl(0, "DiffAdd", { fg = "#98c379", bg = "#1b171b" })
+            vim.api.nvim_set_hl(0, "DiffChange", { fg = "#e5c07b", bg = "#1b171b" })
+            vim.api.nvim_set_hl(0, "DiffDelete", { fg = "#e06c75", bg = "#1b171b" })
             vim.api.nvim_set_hl(0, "DiffText", { fg = "#61afef", bg = "#2c2a2a" })
             
-            vim.api.nvim_set_hl(0, "Search", { bg = "#e5c07b", fg = "#131110" })
-            vim.api.nvim_set_hl(0, "IncSearch", { bg = "#61afef", fg = "#131110" })
+            vim.api.nvim_set_hl(0, "Search", { bg = "#e5c07b", fg = "#0c0a0c" })
+            vim.api.nvim_set_hl(0, "IncSearch", { bg = "#61afef", fg = "#0c0a0c" })
             
             vim.api.nvim_set_hl(0, "Error", { fg = "#e06c75" })
             vim.api.nvim_set_hl(0, "ErrorMsg", { fg = "#e06c75" })
@@ -165,129 +165,129 @@
             themable = true;
           };
           highlights = {
-            fill = { bg = "#131110"; };
-            background = { bg = "#131110"; };
-            tab = { bg = "#131110"; };
-            tab_selected = { bg = "#1f1d1d"; };
-            tab_separator = { bg = "#131110"; };
-            tab_separator_selected = { bg = "#1f1d1d"; };
-            tab_close = { bg = "#131110"; };
-            close_button = { bg = "#131110"; };
-            close_button_visible = { bg = "#131110"; };
-            close_button_selected = { bg = "#1f1d1d"; };
-            buffer_visible = { bg = "#131110"; };
+            fill = { bg = "#0c0a0c"; };
+            background = { bg = "#0c0a0c"; };
+            tab = { bg = "#0c0a0c"; };
+            tab_selected = { bg = "#1b171b"; };
+            tab_separator = { bg = "#0c0a0c"; };
+            tab_separator_selected = { bg = "#1b171b"; };
+            tab_close = { bg = "#0c0a0c"; };
+            close_button = { bg = "#0c0a0c"; };
+            close_button_visible = { bg = "#0c0a0c"; };
+            close_button_selected = { bg = "#1b171b"; };
+            buffer_visible = { bg = "#0c0a0c"; };
             buffer_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            numbers = { bg = "#131110"; };
-            numbers_visible = { bg = "#131110"; };
+            numbers = { bg = "#0c0a0c"; };
+            numbers_visible = { bg = "#0c0a0c"; };
             numbers_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            diagnostic = { bg = "#131110"; };
-            diagnostic_visible = { bg = "#131110"; };
+            diagnostic = { bg = "#0c0a0c"; };
+            diagnostic_visible = { bg = "#0c0a0c"; };
             diagnostic_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            hint = { bg = "#131110"; };
-            hint_visible = { bg = "#131110"; };
+            hint = { bg = "#0c0a0c"; };
+            hint_visible = { bg = "#0c0a0c"; };
             hint_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            hint_diagnostic = { bg = "#131110"; };
-            hint_diagnostic_visible = { bg = "#131110"; };
+            hint_diagnostic = { bg = "#0c0a0c"; };
+            hint_diagnostic_visible = { bg = "#0c0a0c"; };
             hint_diagnostic_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            info = { bg = "#131110"; };
-            info_visible = { bg = "#131110"; };
+            info = { bg = "#0c0a0c"; };
+            info_visible = { bg = "#0c0a0c"; };
             info_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            info_diagnostic = { bg = "#131110"; };
-            info_diagnostic_visible = { bg = "#131110"; };
+            info_diagnostic = { bg = "#0c0a0c"; };
+            info_diagnostic_visible = { bg = "#0c0a0c"; };
             info_diagnostic_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            warning = { bg = "#131110"; };
-            warning_visible = { bg = "#131110"; };
+            warning = { bg = "#0c0a0c"; };
+            warning_visible = { bg = "#0c0a0c"; };
             warning_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            warning_diagnostic = { bg = "#131110"; };
-            warning_diagnostic_visible = { bg = "#131110"; };
+            warning_diagnostic = { bg = "#0c0a0c"; };
+            warning_diagnostic_visible = { bg = "#0c0a0c"; };
             warning_diagnostic_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            error = { bg = "#131110"; };
-            error_visible = { bg = "#131110"; };
+            error = { bg = "#0c0a0c"; };
+            error_visible = { bg = "#0c0a0c"; };
             error_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            error_diagnostic = { bg = "#131110"; };
-            error_diagnostic_visible = { bg = "#131110"; };
+            error_diagnostic = { bg = "#0c0a0c"; };
+            error_diagnostic_visible = { bg = "#0c0a0c"; };
             error_diagnostic_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
-            modified = { bg = "#131110"; };
-            modified_visible = { bg = "#131110"; };
-            modified_selected = { bg = "#1f1d1d"; };
+            modified = { bg = "#0c0a0c"; };
+            modified_visible = { bg = "#0c0a0c"; };
+            modified_selected = { bg = "#1b171b"; };
             duplicate_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               italic = false;
             };
             duplicate_visible = {
-              bg = "#131110";
+              bg = "#0c0a0c";
               italic = false;
             };
             duplicate = {
-              bg = "#131110";
+              bg = "#0c0a0c";
               italic = false;
             };
-            separator_selected = { bg = "#1f1d1d"; };
-            separator_visible = { bg = "#131110"; };
-            separator = { bg = "#131110"; };
-            indicator_selected = { bg = "#1f1d1d"; };
-            indicator_visible = { bg = "#131110"; };
+            separator_selected = { bg = "#1b171b"; };
+            separator_visible = { bg = "#0c0a0c"; };
+            separator = { bg = "#0c0a0c"; };
+            indicator_selected = { bg = "#1b171b"; };
+            indicator_visible = { bg = "#0c0a0c"; };
             pick_selected = {
-              bg = "#1f1d1d";
+              bg = "#1b171b";
               bold = true;
               italic = false;
             };
             pick_visible = {
-              bg = "#131110";
+              bg = "#0c0a0c";
               bold = true;
               italic = false;
             };
             pick = {
-              bg = "#131110";
+              bg = "#0c0a0c";
               bold = true;
               italic = false;
             };
-            offset_separator = { bg = "#131110"; };
-            trunc_marker = { bg = "#131110"; };
+            offset_separator = { bg = "#0c0a0c"; };
+            trunc_marker = { bg = "#0c0a0c"; };
           };
         };
       };

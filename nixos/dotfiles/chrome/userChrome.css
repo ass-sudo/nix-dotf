@@ -16,11 +16,11 @@
     Authors:        Andreas Grafen (original cascade theme)
                     (https://andreas.grafen.info)
 
-		            Clément Rambaud (minor tweaks on the original file)
+                    Clément Rambaud (minor tweaks on the original file)
 
 
     Repository:     https://github.com/andreasgrafen/cascade
-  		            https://github.com/crambaud/cascade
+                      https://github.com/crambaud/cascade
 
 *========================================================================================================*/
 
@@ -41,10 +41,10 @@
 
     /* Comment the color theme you don't want to use */
 
-    /* Dark Theme Colors */
-    --window-colour:               #131110;
-    --secondary-colour:            #1a1818;
-    --inverted-colour:             #FAFAFC;
+    /* Dark Theme Colors (Catppuccin Mocha) */
+    --window-colour:               #0c0e0c; /* Base */
+    --secondary-colour:            #151215 /* Mantle */
+    --inverted-colour:             #cdd6f4; /* Text */
 
     /* Light Theme Colors
     --window-colour:               #FAFAFC;
@@ -53,15 +53,15 @@
     */
 
      
-    /* Containter Tab Colours */
-    --uc-identity-color-blue:      #7ED6DF;
-    --uc-identity-color-turquoise: #55E6C1;
-    --uc-identity-color-green:     #B8E994;
-    --uc-identity-color-yellow:    #F7D794;
-    --uc-identity-color-orange:    #F19066;
-    --uc-identity-color-red:       #FC5C65;
-    --uc-identity-color-pink:      #F78FB3;
-    --uc-identity-color-purple:    #786FA6;
+    /* Containter Tab Colours (Catppuccin Palette) */
+    --uc-identity-color-blue:      #89b4fa;
+    --uc-identity-color-turquoise: #94e2d5;
+    --uc-identity-color-green:     #a6e3a1;
+    --uc-identity-color-yellow:    #f9e2af;
+    --uc-identity-color-orange:    #fab387;
+    --uc-identity-color-red:       #f38ba8;
+    --uc-identity-color-pink:      #f5c2e7;
+    --uc-identity-color-purple:    #cba6f7;
      
     
     /* URL colour in URL bar suggestions */
@@ -424,11 +424,11 @@ window,
 
 
 /* Container Tabs */
-.identity-color-blue      { --identity-tab-color: var(--uc-identity-color-blue)      !important; --identity-icon-color: var(--uc-identity-color-blue)      !important; }
+.identity-color-blue      { --identity-tab-color: var(--uc-identity-color-blue)       !important; --identity-icon-color: var(--uc-identity-color-blue)       !important; }
 .identity-color-turquoise { --identity-tab-color: var(--uc-identity-color-turquoise) !important; --identity-icon-color: var(--uc-identity-color-turquoise) !important; }
-.identity-color-green     { --identity-tab-color: var(--uc-identity-color-green)     !important; --identity-icon-color: var(--uc-identity-color-green)     !important; }
-.identity-color-yellow    { --identity-tab-color: var(--uc-identity-color-yellow)    !important; --identity-icon-color: var(--uc-identity-color-yellow)    !important; }
-.identity-color-orange    { --identity-tab-color: var(--uc-identity-color-orange)    !important; --identity-icon-color: var(--uc-identity-color-orange)    !important; }
-.identity-color-red       { --identity-tab-color: var(--uc-identity-color-red)       !important; --identity-icon-color: var(--uc-identity-color-red)       !important; }
-.identity-color-pink      { --identity-tab-color: var(--uc-identity-color-pink)      !important; --identity-icon-color: var(--uc-identity-color-pink)      !important; }
-.identity-color-purple    { --identity-tab-color: var(--uc-identity-color-purple)    !important; --identity-icon-color: var(--uc-identity-color-purple)    !important; }
+.identity-color-green     { --identity-tab-color: var(--uc-identity-color-green)      !important; --identity-icon-color: var(--uc-identity-color-green)      !important; }
+.identity-color-yellow    { --identity-tab-color: var(--uc-identity-color-yellow)     !important; --identity-icon-color: var(--uc-identity-color-yellow)     !important; }
+.identity-color-orange    { --identity-tab-color: var(--uc-identity-color-orange)     !important; --identity-icon-color: var(--uc-identity-color-orange)     !important; }
+.identity-color-red       { --identity-tab-color: var(--uc-identity-color-red)        !important; --identity-icon-color: var(--uc-identity-color-red)        !important; }
+.identity-color-pink      { --identity-tab-color: var(--uc-identity-color-pink)       !important; --identity-icon-color: var(--uc-identity-color-pink)       !important; }
+.identity-color-purple    { --identity-tab-color: var(--uc-identity-color-purple)     !important; --identity-icon-color: var(--uc-identity-color-purple)     !important; }

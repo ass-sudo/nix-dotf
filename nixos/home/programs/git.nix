@@ -6,7 +6,7 @@
   programs.git = {
     enable = true;
     userName = "user"; 
-    userEmail = "mail";
+    userEmail = "email";
 
   };
 }
