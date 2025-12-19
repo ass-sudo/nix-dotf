@@ -10,8 +10,6 @@
   <img src="https://img.shields.io/github/license/mains-hum/nix-dotf?style=for-the-badge&color=ebcb8b" alt="License" />
 </p>
 
-[📸 Screenshots](#-visuals) • [🎯 Features](#-core-stack) • [⌨️ Keybinds](#-navigation) • [📦 Installation](#-deployment)
-
 ---
 </div>
 
