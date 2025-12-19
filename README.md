@@ -120,7 +120,7 @@ firefox
 
 <div align="center">
 ⭐ Star this repo if you find it helpful!
-Made with by ass-sudo
+Made with by mains-hum
 </div>
 
 ---
