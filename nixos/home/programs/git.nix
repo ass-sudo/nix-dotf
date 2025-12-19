@@ -1,12 +1,15 @@
+{ config, pkgs, ... }:
+
 {
-  config,
-  pkgs,
-  ...
-}: {
   programs.git = {
     enable = true;
-    userName = "user"; 
-    userEmail = "name";
-
+    userName = "user";
+    userEmail = "mail";
+    
+    extraConfig = {
+      init.defaultBranch = "main";
+      core.editor = "nvim";
+      pull.rebase = false;
+    };
   };
 }

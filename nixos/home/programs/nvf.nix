@@ -24,12 +24,10 @@
         style = "darker";
       };
       
-      # Clipboard
       luaConfigRC.clipboard = ''
         vim.opt.clipboard = "unnamedplus"
       '';
       
-      # Custom Colors
       luaConfigRC.customColors = ''
         vim.api.nvim_create_autocmd("ColorScheme", {
           pattern = "*",
@@ -124,7 +122,6 @@
         end)
       '';
       
-      # Дополнительные плагины
       luaConfigRC.extraPlugins = ''
         -- Indent blankline
         require("ibl").setup({
@@ -164,131 +161,6 @@
           options = {
             themable = true;
           };
-          highlights = {
-            fill = { bg = "#0c0a0c"; };
-            background = { bg = "#0c0a0c"; };
-            tab = { bg = "#0c0a0c"; };
-            tab_selected = { bg = "#1b171b"; };
-            tab_separator = { bg = "#0c0a0c"; };
-            tab_separator_selected = { bg = "#1b171b"; };
-            tab_close = { bg = "#0c0a0c"; };
-            close_button = { bg = "#0c0a0c"; };
-            close_button_visible = { bg = "#0c0a0c"; };
-            close_button_selected = { bg = "#1b171b"; };
-            buffer_visible = { bg = "#0c0a0c"; };
-            buffer_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            numbers = { bg = "#0c0a0c"; };
-            numbers_visible = { bg = "#0c0a0c"; };
-            numbers_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            diagnostic = { bg = "#0c0a0c"; };
-            diagnostic_visible = { bg = "#0c0a0c"; };
-            diagnostic_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            hint = { bg = "#0c0a0c"; };
-            hint_visible = { bg = "#0c0a0c"; };
-            hint_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            hint_diagnostic = { bg = "#0c0a0c"; };
-            hint_diagnostic_visible = { bg = "#0c0a0c"; };
-            hint_diagnostic_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            info = { bg = "#0c0a0c"; };
-            info_visible = { bg = "#0c0a0c"; };
-            info_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            info_diagnostic = { bg = "#0c0a0c"; };
-            info_diagnostic_visible = { bg = "#0c0a0c"; };
-            info_diagnostic_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            warning = { bg = "#0c0a0c"; };
-            warning_visible = { bg = "#0c0a0c"; };
-            warning_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            warning_diagnostic = { bg = "#0c0a0c"; };
-            warning_diagnostic_visible = { bg = "#0c0a0c"; };
-            warning_diagnostic_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            error = { bg = "#0c0a0c"; };
-            error_visible = { bg = "#0c0a0c"; };
-            error_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            error_diagnostic = { bg = "#0c0a0c"; };
-            error_diagnostic_visible = { bg = "#0c0a0c"; };
-            error_diagnostic_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            modified = { bg = "#0c0a0c"; };
-            modified_visible = { bg = "#0c0a0c"; };
-            modified_selected = { bg = "#1b171b"; };
-            duplicate_selected = {
-              bg = "#1b171b";
-              italic = false;
-            };
-            duplicate_visible = {
-              bg = "#0c0a0c";
-              italic = false;
-            };
-            duplicate = {
-              bg = "#0c0a0c";
-              italic = false;
-            };
-            separator_selected = { bg = "#1b171b"; };
-            separator_visible = { bg = "#0c0a0c"; };
-            separator = { bg = "#0c0a0c"; };
-            indicator_selected = { bg = "#1b171b"; };
-            indicator_visible = { bg = "#0c0a0c"; };
-            pick_selected = {
-              bg = "#1b171b";
-              bold = true;
-              italic = false;
-            };
-            pick_visible = {
-              bg = "#0c0a0c";
-              bold = true;
-              italic = false;
-            };
-            pick = {
-              bg = "#0c0a0c";
-              bold = true;
-              italic = false;
-            };
-            offset_separator = { bg = "#0c0a0c"; };
-            trunc_marker = { bg = "#0c0a0c"; };
-          };
         };
       };
       
@@ -316,7 +188,6 @@
         lightbulb.enable = true;
       };
       
-      # ИСПРАВЛЕНО: используем lib.mkForce
       autocomplete.nvim-cmp = {
         enable = true;
         setupOpts.sources = lib.mkForce [
@@ -339,7 +210,6 @@
       comments.comment-nvim.enable = true;
       binds.whichKey.enable = true;
       
-      # Дополнительные плагины (правильная структура)
       startPlugins = with pkgs.vimPlugins; [
         indent-blankline-nvim
         nvim-colorizer-lua
@@ -350,160 +220,40 @@
       
       maps = {
         normal = {
-          "<leader>e" = {
-            action = ":Neotree toggle<CR>";
-            silent = true;
-            desc = "Toggle file explorer";
-          };
+          "L" = { action = ":bnext<CR>"; desc = "Next buffer"; };
+          "H" = { action = ":bprevious<CR>"; desc = "Prev buffer"; };
+          "<leader>e" = { action = ":Neotree toggle<CR>"; silent = true; desc = "Toggle file explorer"; };
+          "<leader>ff" = { action = ":Telescope find_files<CR>"; silent = true; desc = "Find files"; };
+          "<leader>fg" = { action = ":Telescope live_grep<CR>"; silent = true; desc = "Live grep"; };
+          "<leader>fb" = { action = ":Telescope buffers<CR>"; silent = true; desc = "Find buffers"; };
+          "<leader>ft" = { action = ":TodoTelescope<CR>"; silent = true; desc = "Find todos"; };
           
-          "<leader>ff" = {
-            action = ":Telescope find_files<CR>";
-            silent = true;
-            desc = "Find files";
-          };
-          "<leader>fg" = {
-            action = ":Telescope live_grep<CR>";
-            silent = true;
-            desc = "Live grep";
-          };
-          "<leader>fb" = {
-            action = ":Telescope buffers<CR>";
-            silent = true;
-            desc = "Find buffers";
-          };
-          "<leader>ft" = {
-            action = ":TodoTelescope<CR>";
-            silent = true;
-            desc = "Find todos";
-          };
+          "gd" = { action = ":lua vim.lsp.buf.definition()<CR>"; desc = "Go to definition"; };
+          "gr" = { action = ":lua vim.lsp.buf.references()<CR>"; desc = "References"; };
+          "K" = { action = ":lua vim.lsp.buf.hover()<CR>"; desc = "Hover"; };
+          "<leader>rn" = { action = ":lua vim.lsp.buf.rename()<CR>"; desc = "Rename"; };
+          "<leader>ca" = { action = ":lua vim.lsp.buf.code_action()<CR>"; desc = "Code action"; };
           
-          # LSP
-          "gd" = {
-            action = ":lua vim.lsp.buf.definition()<CR>";
-            silent = true;
-            desc = "Go to definition";
-          };
-          "gr" = {
-            action = ":lua vim.lsp.buf.references()<CR>";
-            silent = true;
-            desc = "References";
-          };
-          "K" = {
-            action = ":lua vim.lsp.buf.hover()<CR>";
-            silent = true;
-            desc = "Hover documentation";
-          };
-          "<leader>rn" = {
-            action = ":lua vim.lsp.buf.rename()<CR>";
-            silent = true;
-            desc = "Rename";
-          };
-          "<leader>ca" = {
-            action = ":lua vim.lsp.buf.code_action()<CR>";
-            silent = true;
-            desc = "Code action";
-          };
+          "<leader>xx" = { action = ":TroubleToggle<CR>"; desc = "Toggle trouble"; };
+          "<leader>hw" = { action = ":HopWord<CR>"; desc = "Hop word"; };
+          "<leader>hl" = { action = ":HopLine<CR>"; desc = "Hop line"; };
           
-          # Diagnostics
-          "[d" = {
-            action = ":lua vim.diagnostic.goto_prev()<CR>";
-            silent = true;
-            desc = "Previous diagnostic";
-          };
-          "]d" = {
-            action = ":lua vim.diagnostic.goto_next()<CR>";
-            silent = true;
-            desc = "Next diagnostic";
-          };
-          
-          # Trouble
-          "<leader>xx" = {
-            action = ":TroubleToggle<CR>";
-            silent = true;
-            desc = "Toggle trouble";
-          };
-          
-          # Hop
-          "<leader>hw" = {
-            action = ":HopWord<CR>";
-            silent = true;
-            desc = "Hop to word";
-          };
-          "<leader>hl" = {
-            action = ":HopLine<CR>";
-            silent = true;
-            desc = "Hop to line";
-          };
-          
-          "<leader>w" = {
-            action = ":w<CR>";
-            silent = true;
-            desc = "Save file";
-          };
-          "<leader>q" = {
-            action = ":q<CR>";
-            silent = true;
-            desc = "Quit";
-          };
-          
-          "<Tab>" = {
-            action = ":bnext<CR>";
-            silent = true;
-            desc = "Next buffer";
-          };
-          "<S-Tab>" = {
-            action = ":bprevious<CR>";
-            silent = true;
-            desc = "Previous buffer";
-          };
-          
-          "<C-h>" = {
-            action = "<C-w>h";
-            silent = true;
-            desc = "Move left";
-          };
-          "<C-j>" = {
-            action = "<C-w>j";
-            silent = true;
-            desc = "Move down";
-          };
-          "<C-k>" = {
-            action = "<C-w>k";
-            silent = true;
-            desc = "Move up";
-          };
-          "<C-l>" = {
-            action = "<C-w>l";
-            silent = true;
-            desc = "Move right";
-          };
+          "<leader>w" = { action = ":w<CR>"; desc = "Save"; };
+          "<leader>q" = { action = ":q<CR>"; desc = "Quit"; };
+          "<C-h>" = { action = "<C-w>h"; desc = "Move left"; };
+          "<C-j>" = { action = "<C-w>j"; desc = "Move down"; };
+          "<C-k>" = { action = "<C-w>k"; desc = "Move up"; };
+          "<C-l>" = { action = "<C-w>l"; desc = "Move right"; };
         };
         
         visual = {
-          "J" = {
-            action = ":m '>+1<CR>gv=gv";
-            silent = true;
-            desc = "Move line down";
-          };
-          "K" = {
-            action = ":m '<-2<CR>gv=gv";
-            silent = true;
-            desc = "Move line up";
-          };
-          
-          "<leader>y" = {
-            action = ''"+y'';
-            silent = true;
-            desc = "Copy to clipboard";
-          };
+          "J" = { action = ":m '>+1<CR>gv=gv"; desc = "Move down"; };
+          "K" = { action = ":m '<-2<CR>gv=gv"; desc = "Move up"; };
+          "<leader>y" = { action = ''"+y''; desc = "Copy to clipboard"; };
         };
         
         insert = {
-          "jk" = {
-            action = "<ESC>";
-            silent = true;
-            desc = "Exit insert mode";
-          };
+          "jk" = { action = "<Esc>"; desc = "Exit insert mode"; };
         };
       };
     };

@@ -6,12 +6,12 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+
     ./modules/nvidia.nix
     ./modules/hyprland.nix
     ./modules/audio.nix
     ./modules/fonts.nix
     ./modules/zapret.nix
-    ./modules/ollama.nix
   ];
 
   system.stateVersion = "24.05";

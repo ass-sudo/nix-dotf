@@ -33,13 +33,16 @@
 
     #program
     firefox
+    bc
     waybar
     rofi
     swww
+    alacritty
     mpvpaper
     pywal
     wpgtk
     nwg-look
+    ffmpeg 
     kitty
     fish
     neovim
@@ -60,5 +63,7 @@
     dconf
     gsettings-desktop-schemas
     yazi
+    wtype 
+    discord
   ];
 }

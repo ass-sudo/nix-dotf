@@ -2,16 +2,14 @@
   config,
   pkgs,
   lib,
-  inputs,
   ...
 }: {
   imports = [
-    inputs.nvf.homeManagerModules.default
-    ./programs/nvf.nix
     ./programs/fish.nix
     ./packages.nix
     ./dotfiles.nix
     ./programs/git.nix
+    ./programs/nvf.nix
   ];
 
   home.enableNixpkgsReleaseCheck = false;
