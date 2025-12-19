@@ -1,133 +1,53 @@
 <div align="center">
 
-# ✨ NixOS Dotfiles ✨
+# ❄️ [mains-hum] / nix-dotf
+`Hello, I'm not a human. Just a set of declarative configs.`
 
-_Fast and minimalistic NixOS configuration with Hyprland_
+<p align="center">
+  <img src="https://img.shields.io/github/repo-size/mains-hum/nix-dotf?style=for-the-badge&logo=github&color=81a1c1&logoColor=white" alt="Repo Size" />
+  <img src="https://img.shields.io/badge/NixOS-Unstable-5277C3?style=for-the-badge&logo=nixos&logoColor=white" alt="NixOS" />
+  <img src="https://img.shields.io/badge/WM-Hyprland-00ADD8?style=for-the-badge&logo=wayland&logoColor=white" alt="Hyprland" />
+  <img src="https://img.shields.io/github/license/mains-hum/nix-dotf?style=for-the-badge&color=ebcb8b" alt="License" />
+</p>
 
-[![NixOS](https://img.shields.io/badge/NixOS-Unstable-blue.svg?style=for-the-badge&logo=nixos&logoColor=white)](https://nixos.org)
-[![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-00ADD8.svg?style=for-the-badge&logo=wayland&logoColor=white)](https://hyprland.org)
-[![Size](https://img.shields.io/badge/Repo_Size-252%20MB-blueviolet.svg?style=for-the-badge&logo=github)](https://github.com/ass-sudo/nix-dotf)
-[![License](https://img.shields.io/badge/License-GNU%20GPL-orange.svg?style=for-the-badge)](LICENSE)
+[📸 Screenshots](#-visuals) • [🎯 Features](#-core-stack) • [⌨️ Keybinds](#-navigation) • [📦 Installation](#-deployment)
 
-[![Stars](https://img.shields.io/github/stars/ass-sudo/nix-dotf?style=social)](https://github.com/ass-sudo/nix-dotf/stargazers)
-[![Forks](https://img.shields.io/github/forks/ass-sudo/nix-dotf?style=social)](https://github.com/ass-sudo/nix-dotf/network/members)
+---
+</div>
 
-[Screenshots](#-screenshots) • [Features](#-features) •
-[Installation](#-installation) • [Aliases](#-shell-aliases)
+## 📸 Visuals
+<p align="center">
+  <img src="screenshot/4.png" width="48%" />
+  <img src="screenshot/3.png" width="48%" />
+  <br />
+  <img src="screenshot/1.png" width="48%" />
+  <img src="screenshot/2.png" width="48%" />
+</p>
 
 ---
 
-</div>
+## 🎯 Core Stack
+> **Philosophy:** Minimalism, performance, and memory safety.
 
-## 📸 Screenshots
-
-<div align="center">
-
-
-| Terminal & Workspace | Rofi & NVF |
-|:---------------:|:---------------:|
-| ![1](screenshot/4.png) | ![2](screenshot/3.png) |
-| ![3](screenshot/1.png) | ![4](screenshot/2.png) |
-
-</div>
-
----
-
-## 🎯 Features
-
-<div align="center">
-
-### 🖥️ Packages
-
-</div>
-
-<table align="center">
-<tr>
-<td width="50%" valign="top">
-
-#### 🪟 Window Manager & UI
-
-- **Hyprland** - Dynamic tiling Wayland compositor
-- **Waybar** - Highly customizable status bar
-- **Rofi** - Application launcher & window switcher
-- **Swww** - Efficient animated wallpaper daemon
-- **Pywal** - Automatic color scheme generation
-
-</td>
-<td width="50%" valign="top">
-
-#### 💻 Terminal & Shell
-
-- **Kitty** - GPU-accelerated terminal emulator
-- **Fish** - Smart and user-friendly shell
-- **Zoxide** - Smarter cd command with frecency
-- **FastFetch** - Lightning-fast system information
-- **BTop** - Resource monitor with modern UI
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### 🛠️ Development Tools
-
-- **Vim** - Powerful text editors
-- **NVF** - Neovim IDE with LSP support
-- **Git** - Distributed version control
-- **LSD** - Modern replacement for ls command
-
-</td>
-<td width="50%" valign="top">
-
-#### 🎨 Applications
-
-- **Firefox** - Browser
-- **Yazi** - File manager
-- **GIMP** - Professional image editor
-- **MPV** - Minimalist media player
-- **Telegram** - Secure messenger
-- **Steam** - Gaming platform
-
-</td>
-</tr>
-</table>
+| Component | Software |
+| :--- | :--- |
+| **Compositor** | `Hyprland` (Wayland) |
+| **Shell** | `Fish` + `Zoxide` |
+| **Terminal** | `Kitty` / `Alacritty` |
+| **Editor** | `Neovim` (NVF Framework) |
+| **Bar** | `Waybar` |
+| **Launcher** | `Rofi-wayland` |
+| **File Manager** | `Yazi` |
 
 ---
 
-## ⌨️ Keybind
-
-<div align="center">
-
-|          Keybind          |     Action      |          Keybind          |      Action      |
-| :-----------------------: | :-------------: | :-----------------------: | :--------------: |
-|     `SUPER + RETURN`      |  Open Terminal  |        `SUPER + Q`        |   Kill Window    |
-|        `SUPER + R`        |  App Launcher   |        `SUPER + F`        |    Fullscreen    |
-|        `SUPER + E`        |  File Manager   |        `SUPER + W`        |   Web Browser    |
-|      `CTRL + SPACE`       | Switch Language |     `ALT + SHIFT + S`     |    Screenshot    |
-|    `SUPER + SHIFT + D`    |    Telegram     |    `SUPER + SHIFT + W`    |      Steam       |
-|    `SUPER + SHIFT + E`    |      GIMP       |   `CTRL + SHIFT + 1-0`    | Change Wallpaper |
-| `SUPER + SHIFT + ALT + S` |   Sleep Mode    | `SUPER + SHIFT + ALT + Q` |    Power Off     |
-
-</div>
-
----
-
-## 🔧 Shell Aliases
-
-<div align="center">
-
-|   Alias   |                       Command                        |   Alias   |            Command            |
-| :-------: | :--------------------------------------------------: | :-------: | :---------------------------: |
-|   `ll`    |                      `lsd -lah`                      |   `la`    |           `lsd -a`            |
-|   `ls`    |                        `lsd`                         |   `..`    |            `cd ..`            |
-|   `...`   |                      `cd ../..`                      |  `grep`   |      `grep --color=auto`      |
-|   `nvf`   |                        `nvim`                        |  `snvf`   |          `sudo nvim`          |
-|   `gs`    |                     `git status`                     |   `ga`    |           `git add`           |
-|   `gc`    |                     `git commit`                     |   `gp`    |          `git push`           |
-|   `gcl`   |                     `git clone`                      |  `gpam`   |    `git push origin main`     |
-| `rebuild` | `sudo nixos-rebuild switch --flake /etc/nixos#nixos` | `cleanup` | `sudo nix-collect-garbage -d` |
-
-</div>
+## ⌨️ Navigation
+| Keybind | Action | Keybind | Action |
+| :--- | :--- | :--- | :--- |
+| `Super + Ret` | Terminal | `Super + Q` | Close Window |
+| `Super + R` | Launcher | `Super + F` | Fullscreen |
+| `Super + E` | Files | `Super + W` | Browser |
+| `Alt + Shift` | Layout | `PrtSc` | Screenshot |
 
 ---
 
@@ -207,7 +127,7 @@ Made with by ass-sudo
 
 ## 📝 License
 
-nix-dotf  Copyright (C) 2025-2040  ass-sudo
+nix-dotf  Copyright (C) 2025-2040  mains-hum
 
 See the [LICENSE](LICENSE) file for details.
 
