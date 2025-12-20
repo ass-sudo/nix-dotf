@@ -9,5 +9,6 @@
     noto-fonts
     noto-fonts-color-emoji
     font-awesome
+    pavucontrol
   ];
 }

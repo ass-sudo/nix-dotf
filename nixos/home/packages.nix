@@ -64,6 +64,5 @@
     gsettings-desktop-schemas
     yazi
     wtype 
-    discord
   ];
 }

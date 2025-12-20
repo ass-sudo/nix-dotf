@@ -3,13 +3,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "user";
-    userEmail = "mail";
-    
-    extraConfig = {
-      init.defaultBranch = "main";
-      core.editor = "nvim";
-      pull.rebase = false;
+    settings = {
+      user = {
+        name = "name";
+        email = "email";
+      };
     };
   };
 }
