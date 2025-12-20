@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       user = {
-        name = "name";
+        name = "user";
         email = "email";
       };
     };

@@ -65,6 +65,7 @@ sudo nano /etc/nixos/configuration.nix
 sudo nixos-rebuild switch
 
 # 2️⃣ Clone this repository
+mkdir Pictures
 git clone https://github.com/ass-sudo/nix-dotfiles.git
 cd nix-dotfiles/nixos
 
