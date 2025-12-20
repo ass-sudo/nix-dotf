@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/github/repo-size/mains-hum/nix-dotf?style=for-the-badge&logo=github&color=81a1c1&logoColor=white" alt="Repo Size" />
   <img src="https://img.shields.io/badge/NixOS-Unstable-5277C3?style=for-the-badge&logo=nixos&logoColor=white" alt="NixOS" />
   <img src="https://img.shields.io/badge/WM-Hyprland-00ADD8?style=for-the-badge&logo=wayland&logoColor=white" alt="Hyprland" />
+  <img src="https://img.shields.io/github/last-commit/mains-hum/nix-dotf?style=for-the-badge&color=81a1c1&logo=github" alt="Last Commit" />
   <img src="https://img.shields.io/github/license/mains-hum/nix-dotf?style=for-the-badge&color=ebcb8b" alt="License" />
 </p>
 
