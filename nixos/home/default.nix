@@ -11,27 +11,21 @@
     ./programs/alacritty.nix
     ./programs/fish.nix
     ./packages.nix
-    ./dotfiles.nix
+    ./img.nix
     ./programs/git.nix
+    ./programs/theme.nix
     ./programs/nvf.nix
     ./programs/fastfetch.nix
+    ./programs/hyprland.nix
+    ./programs/firefox.nix
   ];
 
   home.enableNixpkgsReleaseCheck = false;
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-      gtk-theme = "Space-dark";
-      icon-theme = "Slot-Multicolor-Dark-Icons";
       cursor-theme = "phinger-cursors-dark";
     };
-  };
-
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    TERMINAL = "kitty";
-    RUST_SRC_PATH = "${pkgs.rustPlatform.rustLibSrc}";
   };
 
   home.stateVersion = "26.05";

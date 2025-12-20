@@ -66,13 +66,11 @@
 
   environment.systemPackages = with pkgs; [
     git
-    vim
     wget
     curl
     unzip
     zip
     phinger-cursors
-    gsettings-desktop-schemas
   ];
 
   security.sudo.enable = true;
