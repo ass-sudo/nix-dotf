@@ -87,7 +87,7 @@ reboot
 - Configure your monitor in Hyprland:
 
 ```bash
-snvf /etc/nixos/dotfiles/hypr/hyprland.conf
+snvf /etc/nixos/home/programs/hyprland.nix
 ```
 
 ```conf
